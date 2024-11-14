@@ -22,28 +22,18 @@ public class Main {
         for (int i = 0; i < bT; i++) {
             mapB.put(Integer.parseInt(st.nextToken()), 0);
         }
-
-        for (int r : mapA.keySet()) {
-            if (mapB.containsKey(r)) {
-                mapB.put(r, mapB.get(r) + 1);
-            }
-        }
-        for (int r : mapB.keySet()) {
-            if (mapA.containsKey(r)) {
-                mapA.put(r, mapA.get(r) + 1);
-            }
-        }
         int result = 0;
         for (int r : mapA.keySet()) {
-            if (mapA.get(r) == 0) {
+            if (!mapB.containsKey(r)) {
                 result++;
             }
         }
         for (int r : mapB.keySet()) {
-            if (mapB.get(r) == 0) {
+            if (!mapA.containsKey(r)) {
                 result++;
             }
         }
+
         System.out.println(result);
     }
 }
