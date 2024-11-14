@@ -11,11 +11,11 @@ public class Main {
         // StringTokenizer st = new StringTokenizer(br.readLine());
         Set<String> set = new HashSet<>();
         String str = br.readLine();
-        int sLen = 0;
-        for (int i = 2; i <= str.length(); i++) {
-            sLen += i;
-        }
-        sLen++;
+        // int sLen = 0;
+        // for (int i = 2; i <= str.length(); i++) {
+        //     sLen += i;
+        // }
+        // sLen++;
 
         for (int i = 1; i <= str.length(); i++) {
             for (int j = i; j <= str.length(); j++) {
