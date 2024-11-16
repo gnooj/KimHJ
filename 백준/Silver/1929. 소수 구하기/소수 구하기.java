@@ -11,28 +11,20 @@ public class Main {
         int startP = Integer.parseInt(st.nextToken());
         int endP = Integer.parseInt(st.nextToken());
 
-        for (int i = startP; i <= endP; i++) {
-            if (i < 2)
-                continue;
-            if (i == 2) {
-                System.out.println(i);
-                continue;
-            }
-            if (i % 2 == 0)
-                continue;
+        boolean P[] = new boolean[endP + 1];
 
-            boolean flag = true;
-            for (int j = 3; j <= Math.sqrt(i); j++) {
-                if (i % j == 0) {
-                    flag = false;
-                    break;
+        P[1] = true;
+        for (int i = 2; i <= endP; i++) {
+            if (!P[i]) {
+                if (i >= startP) {
+                    System.out.println(i);
                 }
+
             }
-            if (flag) {
-                System.out.println(i);
+            for (int j = i * 2; j <= endP; j += i) {
+                P[j] = true;
             }
         }
-
     }
 
 }
