@@ -14,22 +14,23 @@ public class Main {
         // st = new StringTokenizer(br.readLine(), " ");
         for (int i = 0; i < T; i++) {
             for (int j = i; j < T - 1; j++) {
-                System.out.print(" ");
+                sb.append(" ");
             }
             for (int k = 0; k < i * 2 + 1; k++) {
-                System.out.print("*");
+                sb.append("*");
             }
-            System.out.println();
+            sb.append("\n");
         }
         for (int i = 0; i < T - 1; i++) {
             for (int j = 0; j < i + 1; j++) {
-                System.out.print(" ");
+                sb.append(" ");
             }
             for (int k = 0; k < (T * 2) - (i * 2) - 3; k++) {
-                System.out.print("*");
+                sb.append("*");
             }
-            System.out.println();
+            sb.append("\n");
         }
+        System.out.println(sb);
 
     }
 }
