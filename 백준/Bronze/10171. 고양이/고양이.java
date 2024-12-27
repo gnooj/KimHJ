@@ -10,9 +10,10 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         // int T = Integer.parseInt(br.readLine());
-        System.out.println("\\    /\\");
-        System.out.println(" )  ( ')");
-        System.out.println("(  /  )");
-        System.out.println(" \\(__)|");
+        sb.append("\\    /\\").append("\n");
+        sb.append(" )  ( ')").append("\n");
+        sb.append("(  /  )").append("\n");
+        sb.append(" \\(__)|");
+        System.out.println(sb);
     }
 }
