@@ -21,14 +21,15 @@ public class Main {
         arr = new int[N + 1];
         // HashMap<
         recursion(0, 1, 0);
+        System.out.println(sb);
     }
 
     static void recursion(int level, int idx, int vn) {
         if (level == M) {
             for (int i = 1; i <= M; i++) {
-                System.out.print(arr[i] + " ");
+                sb.append(arr[i] + " ");
             }
-            System.out.println();
+            sb.append("\n");
             idx--;
             level--;
             visit[vn] = false;
