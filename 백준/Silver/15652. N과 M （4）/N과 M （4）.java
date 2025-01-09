@@ -21,7 +21,7 @@ public class Main {
         result = new int[M + 1];
         BT(0, 1);
         result[0] = 0;
-
+        System.out.println(sb);
     }
 
     // 전 level보다 큰 수만 false해주기?
@@ -30,9 +30,9 @@ public class Main {
 
         if (level == M) {
             for (int i = 0; i < M; i++) {
-                System.out.print(result[i] + " ");
+                sb.append(result[i] + " ");
             }
-            System.out.println();
+            sb.append("\n");
             // visit[a] = true;
             return;
         }
