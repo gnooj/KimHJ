@@ -14,32 +14,34 @@ public class Main {
         int T = Integer.parseInt(br.readLine());
         if (T == 1) {
             System.out.println("*");
+            return;
         } else {
             if (T % 2 != 0) {
                 for (int j = 0; j < T; j++) {
                     for (int i = 0; i < T / 2 + 1; i++) {
-                        System.out.print("* ");
+                        sb.append("* ");
                     }
-                    System.out.println();
+                    sb.append("\n");
                     for (int i = 0; i < T / 2; i++) {
-                        System.out.print(" *");
+                        sb.append(" *");
                     }
-                    System.out.println();
+                    sb.append("\n");
                 }
 
             } else {
                 for (int j = 0; j < T; j++) {
                     for (int i = 0; i < T / 2; i++) {
-                        System.out.print("* ");
+                        sb.append("* ");
                     }
-                    System.out.println();
+                    sb.append("\n");
                     for (int i = 0; i < T / 2; i++) {
-                        System.out.print(" *");
+                        sb.append(" *");
                     }
-                    System.out.println();
+                    sb.append("\n");
                 }
             }
         }
+        System.out.println(sb);
 
     }
 
