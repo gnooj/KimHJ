@@ -11,8 +11,8 @@ public class Main {
         StringTokenizer st;
         // int T = Integer.parseInt(br.readLine());
         st = new StringTokenizer(br.readLine(), " ");
-        int a = Integer.parseInt(st.nextToken());
-        int b = Integer.parseInt(st.nextToken());
+        long a = Long.parseLong(st.nextToken());
+        long b = Long.parseLong(st.nextToken());
         System.out.println((a + b) * (a - b));
     }
 }
